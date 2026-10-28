@@ -1,0 +1,7 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note
+anthropic,claude-fable-5-1,standard,10,50,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,
+anthropic,claude-opus-5-5,standard,4,20,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,
+anthropic,claude-opus-5-5,fast,8,40,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,fast mode: premium rate for faster output; applies across the full context window
+anthropic,claude-sonnet-5-5,standard,2,10,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,
+anthropic,claude-haiku-5-5,standard,0.10,0.50,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,prompts up to 100000 tokens
+anthropic,claude-haiku-5-5,long-context,0.50,2.50,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-28,prompts over 100000 tokens; cache reads and writes count toward the threshold

@@ -7,22 +7,25 @@ write: The running agent. This file is state, not memory: nothing here becomes a
 # Progress
 
 ## Current request
-Request 1 (2026-10-28): the owner replays two pricebook corrections as standing guidance for prices.csv. Handle FB-001, then FB-002, through skills/handle-feedback/SKILL.md. No artifact is generated in this request.
+Request 2 (2026-10-28): price the current Claude models in prices.csv. Anthropic's models overview lists four on 2026-10-28: claude-fable-5-1, claude-opus-5-5, claude-sonnet-5-5 and claude-haiku-5-5; Haiku 5.5 has a second price tier for prompts over 100,000 tokens.
+
+Memory loaded: guarantees G-001 to G-006; rules none; facts F-002 (facts/domain.md); decisions D-001, D-002; failures X-001; verification V-005; glossary T-001; open questions Q-001 to Q-003 (none applies: Anthropic's page shows no promotion, permanent discount or time-of-day rate for these models).
 
 ## Plan
-1. FB-001: log verbatim, run the fact, test and update subagents, stitch, fill the disposition. Done: F-001, tests/test_fb001_price_sources.py, verifiers/price-source-match.md, D-001, P-001, V-005.
-2. FB-002: the same, after FB-001 is stitched, because it may narrow what FB-001 admitted. Done: F-002 supersedes F-001; tests/test_fb002_regular_prices.py; the verifier amended; D-002, X-001, Q-001, Q-002, Q-003, T-001.
-3. Footprint write, full suite, footprint commit.
+1. Generate prices.csv (step S1): one row per model at tier standard, plus claude-haiku-5-5 long-context. Both prices are the regular rates from Anthropic's own pricing page, which is each row's source_url (F-002, D-001, D-002, X-001, T-001). checked is 2026-10-28. note states only what the page says about the tier; no promotion applies.
+2. Verify S1 in 3 to 5 rounds (G-002, V-005): `python -m pytest -q tests`, then verifiers/memory-conformance.md and verifiers/price-source-match.md, each in a fresh context.
+3. Footprint write, full suite, footprint commit (G-001, G-003, G-004).
 
 ## Verification rounds
-No generative step in this request: no artifact was produced, so no rounds ran. Evidence for the feedback handling is the suite: `python -m pytest -q tests` after `python scripts/footprint.py --write`.
-
 | step | round | tests | verifiers | findings | fixed |
 |---|---|---|---|---|---|
+| S1 prices.csv | 1 | `python -m pytest -q tests`: 55 passed | memory-conformance PASS (G-001..G-006, F-002 in scope); price-source-match PASS, 5 rows tied to Anthropic's Model pricing table | none | n/a |
+| S1 prices.csv | 2 | `python -m pytest -q tests`: 55 passed | memory-conformance FAIL (1 finding); price-source-match PASS, 5 rows, model ids checked against Anthropic's models overview | prices.csv:3: no row for claude-opus-5-5 fast mode, a premium tier ($8 / $40 per MTok) on the row's own source page; the Task block asks for one more row per extra price tier, and the SDK pricebook (P-001) prices it as a tier | added `anthropic,claude-opus-5-5,fast,8,40,...` (Task block, F-002, D-001) |
+| S1 prices.csv | 3 | `python -m pytest -q tests`: 55 passed | memory-conformance PASS (G-001..G-004, Task block; F-002, G-005, G-006 test-covered); price-source-match PASS, 6 rows incl. the Opus 5.5 fast-mode section | none | n/a; step S1 done (first passing round on or after round 3) |
 
 ## Open items
-- Q-001, Q-002, Q-003 wait on the owner (permanent discounts, a page that shows only a promotion, off-peak rates). Ask them through the pausing procedure the next time a request reaches one of those models.
-- The 13 live price checks in tests/test_fb001_price_sources.py and tests/test_fb002_regular_prices.py skip until prices.csv exists.
+- Q-001, Q-002, Q-003 still wait on the owner; none blocks this request.
+- "Extra price tier" has no glossary entry. This request counted Opus 5.5 fast mode and Haiku 5.5 long context as tiers, and Batch (a 50 percent discount), the 1.1x US data-residency multiplier and cache prices as modifiers, which matches the SDK pricebook (P-001). If the owner wants Batch rows, that is new feedback.
 
 ## Next steps
-- The next request that writes prices.csv applies F-002 and runs verifiers/price-source-match.md in every round.
+- Footprint write, full suite, footprint commit.

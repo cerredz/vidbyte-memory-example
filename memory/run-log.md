@@ -14,3 +14,4 @@ Format: `- YYYY-MM-DD | <request in a few words> | <footprint delta>`.
 - 2026-10-27 | deepen skills and prompts, add stopping condition | no change
 - 2026-10-28 | set the task: LLM API price table | no change
 - 2026-10-28 | replay two pricebook corrections as standing guidance | +1 facts, 1 facts superseded, +1 failures, +1 verification, +2 decisions, +3 open-questions, +1 glossary, +1 pointers, +16 tests, +1 verifiers, +2 feedback
+- 2026-10-28 | price the current Claude models | no change
