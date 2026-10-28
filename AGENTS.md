@@ -4,7 +4,7 @@ Read this file first on every request. It is an index, not the memory: open the 
 
 ## Task
 
-(Replace this paragraph with the recurring task this repo serves: what is produced, for whom, from what inputs, and where it goes.)
+Keep `prices.csv` current: the API price of every LLM the owner prices, one row per model and one more row per extra price tier, with the columns `provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note`. Prices are US dollars per million tokens. Each request names the models to add or recheck; the inputs are the providers' public pricing pages, and the output is `prices.csv` at the repo root, which the owner reads when updating the price table in the Vidbyte SDK.
 
 ## Goal
 

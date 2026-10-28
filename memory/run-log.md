@@ -12,3 +12,4 @@ Format: `- YYYY-MM-DD | <request in a few words> | <footprint delta>`.
 - 2026-10-27 | scaffold the template | +6 guarantees, +4 verification, +18 tests, +1 verifiers
 - 2026-10-27 | verification sweep | +6 tests
 - 2026-10-27 | deepen skills and prompts, add stopping condition | no change
+- 2026-10-28 | set the task: LLM API price table | no change
