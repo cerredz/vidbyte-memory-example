@@ -1,0 +1,9 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note
+openai,gpt-5.6-sol,standard,5,30,https://developers.openai.com/api/docs/models/gpt-5.6-sol,2026-10-11,regular rate; promo 4/20 at least through 2026-11-21
+openai,gpt-5.6-sol,long-context,10,45,https://developers.openai.com/api/docs/models/gpt-5.6-sol,2026-10-11,prompts over 272K input tokens
+gemini,gemini-3.8-flash,standard,1.50,7.50,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,regular 1.50/7.50 listed from 2027-01-01; promo 0.75/3.75 through 2026-12-31
+gemini,gemini-3.6-flash,standard,1.50,7.50,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,promo 0.75/0.075/3.75 through 2026-12-31
+mistral,mistral-large-4,standard,1.36,4.18,https://docs.mistral.ai/models/mistral-large-4-0,2026-10-11,regular rate (public-preview sale 0.68/0.07/2.09)
+mistral,mistral-large-4-0,standard,1.36,4.18,https://docs.mistral.ai/models/mistral-large-4-0,2026-10-11,public-preview sale 0.68/2.09; regular 1.36/4.18
+openai,gpt-6-sol,standard,2,10,https://developers.openai.com/api/docs/pricing,2026-10-11,
+deepseek,deepseek-v4-pro,standard,1.32,3.96,https://api-docs.deepseek.com/quick_start/pricing,2026-10-11,peak-hour rate; off-peak is half

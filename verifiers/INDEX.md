@@ -5,3 +5,4 @@ One row per verifier. `trigger` is a glob or an artifact kind; `*` means every a
 | name | file | trigger | rules | status |
 |---|---|---|---|---|
 | memory-conformance | `verifiers/memory-conformance.md` | `*` | all active rules, facts and guarantees in scope | active |
+| price-source-match | `verifiers/price-source-match.md` | `prices*.csv` (the price tables) | F-002 (FB-001, FB-002; supersedes F-001) | active |

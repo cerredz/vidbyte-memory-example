@@ -1,0 +1,9 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note
+openai,gpt-6-sol,standard,2,10,https://chatgpt.com/pricing/,2026-10-11,
+anthropic,claude-haiku-5-5,long-context,TBD,TBD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-11,
+gemini,gemini-3.1-pro-preview,standard,2,12,https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json,2026-10-11,
+xai,grok-4.7,standard,~2,6,https://docs.x.ai/developers/models/grok-4.7,2026-10-11,same as grok-4.6
+deepseek,deepseek-v4-pro,standard,1.32,3.96,https://openrouter.ai/deepseek/deepseek-v4-pro,2026-10-11,
+glm,glm-5.3,standard,1.4,4.4,,2026-10-11,
+kimi,kimi-k3,standard,3,15,https://platform.kimi.ai/,2026-10-11,
+mistral,mistral-medium-3-5,standard,1.5,7.5,Mistral model docs,2026-10-11,

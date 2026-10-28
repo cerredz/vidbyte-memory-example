@@ -1,0 +1,9 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note
+gemini,gemini-3.8-flash,standard,1.50,7.50,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,
+gemini,gemini-3.8-flash,promo,0.75,3.75,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,through 2026-12-31
+openai,gpt-5.6-sol,standard,5,30,https://developers.openai.com/api/docs/models/gpt-5.6-sol,2026-10-11,
+openai,gpt-5.6-sol (promo),standard,4,20,https://developers.openai.com/api/docs/models/gpt-5.6-sol,2026-10-11,at least through 2026-11-21
+mistral,mistral-large-4,standard,1.36,4.18,https://docs.mistral.ai/models/mistral-large-4-0,2026-10-11,
+mistral,mistral-large-4,standard,0.68,2.09,https://docs.mistral.ai/models/mistral-large-4-0,2026-10-11,public-preview sale
+gemini,gemini-3.6-flash,standard,0.75,3.75,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,promo 0.75/0.075/3.75 through 2026-12-31
+mistral,mistral-large-4-0,standard,0.68,2.09,https://docs.mistral.ai/models/mistral-large-4-0,2026-10-11,public-preview sale price; regular 1.36/4.18

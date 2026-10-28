@@ -1,0 +1,4 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,checked,note
+openai,gpt-6-sol,standard,2,10,2026-10-11,
+anthropic,claude-haiku-5-5,standard,0.1,0.5,2026-10-11,
+deepseek,deepseek-v4-pro,standard,1.32,3.96,2026-10-11,

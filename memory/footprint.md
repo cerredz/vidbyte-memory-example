@@ -8,20 +8,20 @@ write: scripts/footprint.py only. Never edit by hand.
 
 | area | active | superseded | retired |
 |---|---|---|---|
-| facts | 0 | 0 | 0 |
+| facts | 1 | 1 | 0 |
 | rules | 0 | 0 | 0 |
 | hints | 0 | 0 | 0 |
 | guarantees | 6 | 0 | 0 |
-| failures | 0 | 0 | 0 |
-| verification | 4 | 0 | 0 |
-| decisions | 0 | 0 | 0 |
-| open-questions | 0 | 0 | 0 |
+| failures | 1 | 0 | 0 |
+| verification | 5 | 0 | 0 |
+| decisions | 2 | 0 | 0 |
+| open-questions | 3 | 0 | 0 |
 | workflows | 0 | 0 | 0 |
 | scope | 0 | 0 | 0 |
-| glossary | 0 | 0 | 0 |
-| pointers | 0 | 0 | 0 |
+| glossary | 1 | 0 | 0 |
+| pointers | 1 | 0 | 0 |
 
-Feedback: 0 logged, 0 pending
-Tests: 1 files, 28 functions
-Verifiers: 1
-Total active entries: 10
+Feedback: 2 logged, 0 pending
+Tests: 3 files, 44 functions
+Verifiers: 2
+Total active entries: 20

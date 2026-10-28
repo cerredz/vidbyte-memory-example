@@ -1,0 +1,14 @@
+provider,model,tier,input_usd_per_mtok,output_usd_per_mtok,source_url,checked,note
+openai,gpt-6-sol,standard,2,10,https://developers.openai.com/api/docs/pricing,2026-10-11,
+openai,gpt-6-sol,long-context,4,15,https://developers.openai.com/api/docs/models/gpt-6-sol,2026-10-11,prompts over 272K input tokens
+anthropic,claude-haiku-5-5,standard,0.1,0.5,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-11,
+anthropic,claude-haiku-5-5,long-context,0.5,2.5,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-11,prompts over 100K tokens
+gemini,gemini-3.1-pro-preview,standard,2,12,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,
+gemini,gemini-3.1-pro-preview,long-context,4,18,https://ai.google.dev/gemini-api/docs/pricing,2026-10-11,prompts over 200K tokens
+xai,grok-4.7,standard,2,6,https://docs.x.ai/developers/models/grok-4.7,2026-10-11,
+deepseek,deepseek-v4-pro,standard,1.32,3.96,https://api-docs.deepseek.com/quick_start/pricing,2026-10-11,peak-hour rate
+glm,glm-5.3,standard,1.4,4.4,https://docs.z.ai/guides/overview/pricing,2026-10-11,
+kimi,kimi-k3,standard,3,15,https://platform.kimi.ai/docs/pricing/chat,2026-10-11,
+mistral,mistral-medium-3-5,standard,1.5,7.5,https://docs.mistral.ai/models/mistral-medium-3-5-26-04,2026-10-11,
+meta,muse-spark-1.3,standard,1.25,4.25,https://dev.meta.ai/docs/pricing-rate-limits,2026-10-11,
+typesafe,jev-1.13,standard,0.042,0,https://docs.typesafe.ai/models.md,2026-10-11,output tokens are free
